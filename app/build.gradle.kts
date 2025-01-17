@@ -53,7 +53,14 @@ dependencies {
     testImplementation(libs.junit)
 
     //con esto agregue las corrutinas? (buena pregunta)
-    implementation(libs.kotlinx)//"org.jetbrains:kotlinx:kotlin-coroutines-android:1.7.3"
+    implementation(libs.coroutines)//"org.jetbrains:kotlinx:kotlin-coroutines-android:1.7.3"
+    implementation(libs.androidx.navigation.compose)
+
+    // ViewModels para Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // collectAsStateWithLifecycle() - Flow
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)

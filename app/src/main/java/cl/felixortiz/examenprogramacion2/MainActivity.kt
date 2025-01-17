@@ -19,14 +19,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        Room.databaseBuilder(
-//            applicationContext,
-//            AppDatabase::class.java, "medidorDB"
-//        ).build()
-//
-//        val contactoDao = db.contactoDao()
-
-
         enableEdgeToEdge()
         setContent {
             ExamenProgramacion2Theme {
