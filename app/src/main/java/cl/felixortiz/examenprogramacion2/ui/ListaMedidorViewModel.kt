@@ -20,9 +20,10 @@ class ListaMedidorViewModel( private val medidorDao:MedidorDao) : ViewModel() {
 
     var medidores by mutableStateOf(listOf<Medidor>())
 
-    fun insertarMedidor(medidor: Medidor){
+
+    fun insertarMedidores(medidor: Medidor){
         viewModelScope.launch(Dispatchers.IO) {
-            medidorDao.insert(medidor)
+            medidorDao.insertAll(medidor)
             obtenerMedidores()
         }
     }
