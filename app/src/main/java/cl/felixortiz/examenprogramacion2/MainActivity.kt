@@ -328,10 +328,9 @@ fun IconoMedidor(medidor: Medidor) {
     Log.d("TAG",TipoMedidor.LUZ.toString())
     return when(TipoMedidor.valueOf(medidor.tipo.toUpperCase())) {
         TipoMedidor.LUZ -> Image(
-            bitmap = painterResource(id = R.drawable.luz),
+            painter = painterResource(id = R.drawable.luz),
             TipoMedidor.LUZ.toString(),
         )
-
         TipoMedidor.GAS -> Icon(
             painter = painterResource(id = R.drawable.gas),
             TipoMedidor.GAS.toString(),
