@@ -94,10 +94,13 @@ class MedidorDaoDbHelperImp(contexto:Context)
     }
 
     override suspend fun update(medidor: Medidor) {
-        TODO("Not yet implemented")
+        //update(medidor)
     }
 
     override suspend fun delete(medidor: Medidor) {
-        TODO("Not yet implemented")
+        val sb = StringBuilder()
+        sb.append(COL_ID).append(" = ?")
+        val c = sb.toString()
+        this.writableDatabase.delete(TABLE_NAME, c ,arrayOf(medidor.id.toString()))
     }
 }

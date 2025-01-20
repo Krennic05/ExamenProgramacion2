@@ -13,6 +13,8 @@ class MedidorRepository(
 
     suspend fun agregar(medidor:Medidor) = medidorDao.insertAll(medidor)
 
+    suspend fun eliminar(medidor:Medidor) = medidorDao.delete(medidor)
+
     suspend fun contarRegistros():Int = medidorDao.count()
 
     companion object {

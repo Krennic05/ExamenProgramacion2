@@ -11,3 +11,9 @@ data class Medidor (
     val valor:Int,
     val fecha:LocalDate
 )
+
+enum class TipoMedidor {
+    LUZ,
+    GAS,
+    AGUA,
+}
