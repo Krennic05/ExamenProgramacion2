@@ -308,21 +308,17 @@ fun PageFormularioUI(
 
 @Composable
 fun IconoMedidor(medidor: Medidor) {
-    Log.d("TAG",medidor.tipo.toUpperCase())
-    Log.d("TAG",medidor.tipo)
-    Log.d("TAG",TipoMedidor.LUZ.toString())
-    Log.d("TAG",TipoMedidor.GAS.toString())
-    Log.d("TAG",TipoMedidor.AGUA.toString())
+
     return when(TipoMedidor.valueOf(medidor.tipo.toUpperCase())) {
         TipoMedidor.LUZ -> Image(
             painter = painterResource(id = R.drawable._luz),
             TipoMedidor.LUZ.toString(),
         )
-        TipoMedidor.GAS -> Icon(
+        TipoMedidor.GAS -> Image(
             painter = painterResource(id = R.drawable._gas),
             TipoMedidor.GAS.toString(),
         )
-        TipoMedidor.AGUA -> Icon(
+        TipoMedidor.AGUA -> Image(
             painter = painterResource(id = R.drawable._agua),
             TipoMedidor.AGUA.toString(),
         )
